@@ -7,3 +7,29 @@ This bot was created for Discord Hack Week. Heimdallr Bot allows you to monitor 
 
 # How To Use:
 
+To Connect with wifi use
+wifi.connect() // for default case
+wifi.connect(name) // for saved . name ="saved wifi name"
+wifi.connect(name,password) // To connect with new wifi. name=ssid password=password
+
+
+To Turn Off or disconnect the wifi use
+wifi.disconnect()
+
+
+To Scan available networks use
+wifi.scan()      // to scan ssids and save in self.res
+wifi.get_ssid()  // returns scanned networks [[id,name]]
+wifi.getProfile[wifi_name] // to see details of scanned network
+   |__ ssid      // wifi name
+   |__ id        // id
+   |__ ntypes    // type of network
+   |__ bssid     // mac
+   |__ signal    // how strong the signal is
+   |__ radio     // type of radio
+   |__ channel   // which channel on it
+   |__ BasicRate // rates as Array
+   |__ OtherRate // rates as Array
+  
+  
+wifi.defname(string) // to setup default case
